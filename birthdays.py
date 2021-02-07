@@ -41,7 +41,8 @@ for person in people:
         should_run = True
         age = datetime.now().year - birthday_date.year
         email_body += f"{name} was born on {birthday} and is {age} years old today. Happy birthday!\n\n"
-        email_body += "-- This email was automatically sent by a script because this person has a terrible memory -- "
+
+email_body += "-- This email was automatically sent by a script because this person has a terrible memory -- "
 
 if should_run:
     with smtplib.SMTP_SSL(email_url, email_port) as server:
